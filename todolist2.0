@@ -1,0 +1,40 @@
+
+list = []
+def todo():
+ menu = ""
+ while menu != "quit":
+      menu = input("add, view, move or edit a to do list. ").lower()
+      if menu == "view":
+           break
+      if menu == "add":
+         to_do = input ("what is the to do list ")
+         priority = input ("what is the priority, example high, medium or low ")
+         list.append(to_do)
+         print("it has been added thank you. ")
+         menu = input ("do you want to see the menu again or quit? ")
+      if menu == "quit":
+         print("lol")
+    
+ return menu
+
+
+def views(menu):
+  while menu != "quit":
+    if menu == "view":
+      print("viewed again.")
+      priority2  = input ("type in  priority that you want to view example view high medium or low, or quit to exit. ").lower()
+    elif priority2 == priority and "high":
+            print("high menu")
+      
+    elif priority2 == priority and priority == "medium":
+          print("medium menu")
+    
+    menu = input ("do you want to see the menu again or quit? type again or quit ")
+    if menu == "again":
+        todo()
+      
+    elif menu == "quit":
+       print("loading...")
+
+input_value = todo()
+views(input_value)
